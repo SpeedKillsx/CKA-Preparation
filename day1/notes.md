@@ -39,4 +39,5 @@ Docker implements a client-server architecture, the above image illustrates the 
 
 ### Docker registries:
     Docker Registery is the place where the created docker images are stored.
-    By deafault, the Docker Hub registery is the public registry where anyone can host their docker images. But enterprises generally use private registries to store their images securely.
+    By deafault, the Docker Hub registery is the public registry where anyone can host their docker images. But enterprises generally use private registries to store their images securely (Nexus registery for example).
+
