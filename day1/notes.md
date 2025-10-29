@@ -38,6 +38,5 @@ Docker implements a client-server architecture, the above image illustrates the 
     The Docker Client (`docker`) is the command-line interface (CLI) that allows users to interact with the Docker Daemon. When you run a Docker command in your terminal, the Docker Client sends the command to the Docker Daemon, which then executes it. The Docker Client can communicate with more than one Daemon.
 
 ### Docker registries:
-    Docker Registery is the place where the created docker images are stored.
-    By deafault, the Docker Hub registery is the public registry where anyone can host their docker images. But enterprises generally use private registries to store their images securely (Nexus registery for example).
-
+    Docker Registry is the place where the created docker images are stored.
+    By default, the Docker Hub registry is the public registry where anyone can host their docker images. But enterprises generally use private registries to store their images securely (Nexus registry for example).
