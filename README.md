@@ -1,0 +1,1 @@
+# Certificate Kubernetes Administrator (CKA) preparation.
