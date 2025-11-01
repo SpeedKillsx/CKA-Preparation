@@ -31,3 +31,24 @@ The application is a simple TODO LIST application provided by docker.
 
 ### Pull Docker image from Hub : 
 ```docker pull <your-username>/node-app:0 ```
+
+## Task :
+I dockerized a personnal ML project that recognize the Iris flowers.<br>
+The application was built using Streamlit and Python.
+
+### Commands:
+#### Clone repo form github : 
+```shell
+git clone https://github.com/SpeedKillsx/streamlit-application-deploy.git
+```
+Note : remove `.git` folder to not push in the original repository.
+```shell
+cd streamlit-application-deploy
+```
+#### Build Image :
+```docker build speedskillsx/streamlit-iris-flower-ml:<tag> .```
+#### Push image :
+```docker push speedskillsx/streamlit-iris-flower-ml:<tag>```
+
+### Run a container : 
+```docker run --name streamlit-iris-ml -d -p 8501:8501 speedskillsx/streamlit-iris-flower-ml:<tag>```
