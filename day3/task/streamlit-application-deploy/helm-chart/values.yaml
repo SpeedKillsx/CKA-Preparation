@@ -1,0 +1,8 @@
+app:
+  name: streamlit
+  image:
+    repository: speedskillsx/streamlit-application
+    tag: latest
+
+App:
+  port: 8501
