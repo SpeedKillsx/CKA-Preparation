@@ -1,10 +1,12 @@
 # Day 7 : Pod in Kubernetes
 
 ## Imperative :
+Imperative way means use commands for creating/managing kubernetes objects.
 ### Create an NGINX container POD using the declarative way:
 ```shell
 kubectl run nginx-pod --image nginx:latest
 ```
+## POD basic commands : 
 ### Check pods inside a cluster : 
 You can check the available pods inside the cluster using :
 ```shell
@@ -22,3 +24,26 @@ You need to make your pod acessible outside the cluster, the simple way is to do
 kubectl port-forward nginx-pod 8080:80
 ```
 Tape : localhost:8080 and you we'll get acces to the pod (application)
+
+
+## Declarative : 
+Imperative way means use configuration files for creating/managing kubernetes objects.
+
+### Create a POD :
+```yaml
+kind: Pod
+apiVersion: v1
+metadata:
+    - name: nginx-pod-yaml
+spec:
+    - containers:
+      name: nginx
+      images: nginx:latest
+      ports:
+        - containerPort: 80
+          hostPort: 8080
+```
+RUN : 
+```shell
+kubectl apply -f <yaml-file>
+```
