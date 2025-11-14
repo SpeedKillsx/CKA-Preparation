@@ -62,6 +62,22 @@ kubectl delete pod nginx-pod
 kubectl apply -f <yaml-file>
 ```
 2. Using command line : 
-````shell
+```shell
 kubectl edit pod <nginx-pod>
 ```
+### Show a specific field in a pod :
+1. If you want to see pod's labels
+```shell
+kubectl get pod <pod-name> --show-labels
+```
+2. See pod kind
+```shell
+kubectl get pod <pod-name> --show-kind
+```
+3. Show Nodes:
+
+```shell
+kubectl get nodes -o wide
+```
+
+

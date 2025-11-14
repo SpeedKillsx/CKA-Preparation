@@ -5,6 +5,7 @@ metadata:
   labels:
     env: demo
     version: 1.0.0
+    type: frontend
 spec:
   containers:
     - name: nginx
