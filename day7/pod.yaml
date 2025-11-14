@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginix-pod-yaml
+  labels:
+    env: demo
+    version: 1.0.0
+    type: frontend
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+          hostPort: 8080
