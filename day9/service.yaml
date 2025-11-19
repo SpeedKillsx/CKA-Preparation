@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-service
+  labels:
+    env: dev
+spec:
+  selector:
+    env: dev
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30010
