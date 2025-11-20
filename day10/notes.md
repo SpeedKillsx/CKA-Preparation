@@ -34,4 +34,11 @@ kubectl create deploy nginx-demo -n demo --image=nginx --replicas=1
 
 ## Communication between pods:
 
-We can reach pods that are in different namespaces using their IP but not with their services names.
+We can reach pods that are in different namespaces using their IP but not with their services names. but it is possible with fully qualified domain name.
+Example :
+I have a service `svc-test` in default namespace, i want to reach it from a pod in `demo` namespace.
+```bash
+kubectl exec -it nginx-demo-98d9dcdf8-67dqv -n demo -- sh
+
+curl svc-test.default.svc.cluster.local
+```
